@@ -10,6 +10,7 @@ def extract(strings):
             continue
 
         string = re.sub(r"~\\cite{[^{]*}", "", string)
+        string = re.sub(r"~\\ref{[^{]*}", "", string)
 
         if not sentence:
             sentence = string
