@@ -6,7 +6,7 @@ def extract(strings):
     sentence=""
     for string in strings:
         string = string.strip()
-        if not string:
+        if not string or string.startswith("%"):
             continue
 
         string = re.sub(r"~\\cite{[^{]*}", "", string)
