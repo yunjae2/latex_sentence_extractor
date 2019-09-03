@@ -23,10 +23,10 @@ def extract(strings):
 
 
 def main():
-    if len(sys.argv) == 2:
-        if sys.argv[1] == '-h':
-            print("usage: %s <text strings>" % sys.argv[0])
-            sys.exit(1)
+    if len(sys.argv) > 1:
+        print("usage: %s" % sys.argv[0])
+        print("Input text strings to stdin stream.")
+        sys.exit(1)
     extract(sys.stdin)
 
 
