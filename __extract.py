@@ -11,6 +11,7 @@ def extract(strings):
 
         string = re.sub(r"~\\cite{[^{]*}", "", string)
         string = re.sub(r"~\\ref{[^{]*}", "", string)
+        string = re.sub(r"\\textit{(?P<text>[^{]*)}", r"\g<text>", string)
 
         if not sentence:
             sentence = string
